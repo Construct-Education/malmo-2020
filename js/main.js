@@ -15,7 +15,7 @@ function generateHtml() {
         alert(errorMesseges.contentTabEmpty);
         contentInput.focus();
     } else {
-        var generatedHtml = `<p class="acc-first-malmo"><u>${headingInput.value}</u></p><div class="hidden-pannel-malmo"><p>${contentInput.value}</p></div>`
+        var generatedHtml = `<div><p class="acc-first-malmo"><u>${headingInput.value}</u></p><div class="hidden-pannel-malmo"><p>${contentInput.value}</p></div></div>`
 
         htmlP.value = generatedHtml;
 
