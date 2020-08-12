@@ -36,12 +36,18 @@ function copyCode() {
 }
 
 
-function activateToolTip () {
+function activateToolTip() {
     var toolTip = document.querySelector('.tooltip');
-    toolTip.classList.add('active');
+    var contentIn = document.querySelector('.html').value;
 
-    setTimeout( function () {toolTip.classList.add('hide')}, 400);
+    if (contentIn) {
+        toolTip.classList.add('active');
 
-    setTimeout( function () {toolTip.classList.remove('hide');
-    toolTip.classList.remove('active')}, 1000);
+        setTimeout(function () { toolTip.classList.add('hide') }, 400);
+
+        setTimeout(function () {
+            toolTip.classList.remove('hide');
+            toolTip.classList.remove('active')
+        }, 1000);
+    }
 }
