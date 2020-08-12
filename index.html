@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malmo Tabs Generator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <link rel="Shortcut Icon" type="image/x-icon" href="//cdn.mah.se/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="76x76" href="//cdn.mah.se/images/header/favicon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="//cdn.mah.se/images/header/favicon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="//cdn.mah.se/images/header/favicon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="//cdn.mah.se/images/header/favicon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="//cdn.mah.se/images/header/favicon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="//cdn.mah.se/images/header/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="//cdn.mah.se/images/header/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="//cdn.mah.se/images/header/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="//cdn.mah.se/images/header/favicon-192x192.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer async></script>
+</head>
+
+<body>
+
+    <main class="app-container">
+        <form action="javascript:void(0);" onsubmit="generateHtml()">
+            <fieldset>
+                <label for="txt-heading">Heading</label>
+                <input id="text-heading" type="text">
+            </fieldset>
+
+            <fieldset>
+                <label for="txt-content">Content</label>
+                <input id="text-content" type="text">
+            </fieldset>
+
+            <button>Generate</button>
+        </form>
+
+        <div class="html-display-area" onclick="copyCode()">
+            <p class="tooltip">Copied!</p>
+            <textarea class="html xcol-md-8"></textarea>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © <a href="https://www.constructeducation.com/" target="_blank">Construct Education</a> 2020</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+$main: rgba(162, 31, 255, 1); 
+$secondary: rgba(26, 45, 243, 1);
+
+$small: 10px;
+$mid: 30px;
+$large: 50px;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+button,
+.btn {
+    background-color: $main;
+    border: solid transparent 5px;
+    cursor: pointer !important;
+    padding: $small $mid;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+
+    &:hover {
+        background-color: $secondary;
+    }
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/dot-grid.png') repeat center;
+    background-size: 10%;
+
+    footer {
+        justify-self: flex-end;
+        margin-top: $large;
+        font-size: 0.8rem;
+    }
+}
+
+
+main {
+    form {
+        display: flex;
+        flex-direction: column;
+
+        fieldset{
+            border: 0;
+            margin: $small 0;
+            display: grid;
+            flex-flow: row wrap;
+
+            label{
+                margin-bottom: $small;
+            }
+
+            input {
+                width: 300px;
+                padding: $small;
+                &:active, :focus, :focus-within {
+                    border-color: $secondary;
+                }
+            }
+        }
+    }
+    .html-display-area {
+        margin-top: $mid;
+        position: relative;
+
+        .tooltip {
+            position: absolute;
+            background: #444444;
+            padding: $small $mid;
+            border-radius: $small;
+            display: inline;
+            font-size: 0.7rem;
+            color: white;
+            z-index: 5;
+            pointer-events: none;
+
+            // TRANSITION
+            top: 50%;
+            opacity: 0;
+            transition: opacity ease 200ms, top 200ms;
+
+            &.active {
+                opacity: 1;
+                top: 0;
+            }
+
+            &.hide {
+                opacity: 0;
+                top: -50%;
+            }
+        }
+        .html {
+            width: 100%;
+            height: $large *2;
+            font-size: 0.8rem;
+            padding: $small/2;
+            color: #444444;
+        }
+    }
+}
